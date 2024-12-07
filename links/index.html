@@ -127,7 +127,43 @@
         isMouseMoving = true;
         circle.style.opacity = 1;
     });
-</script>
+</script>   
+ </script>
+ <button class="toggle-button" id="toggle-stars">Stars</button>
+ <div class="star-container" id="star-container"></div>
+    <script>
+        function generateRandomStars() {
+    const starContainer = document.querySelector(".star-container");
+    const numStars = 100;
+  
+    for (let i = 0; i < numStars; i++) {
+        const star = document.createElement("div");
+        star.className = "star";
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.animationDuration = `${1 + Math.random() * 4}s`;
+   
+        starContainer.appendChild(star);
+    }
+  }
+  
+  let starsActive = true; // Étoiles activées par défaut
+        const starContainer = document.getElementById("star-container");
+        const toggleButton = document.getElementById("toggle-stars");
+
+        toggleButton.addEventListener("click", () => {
+            if (starsActive) {
+                starContainer.style.display = "none"; // Désactive les étoiles
+                starsActive = false;
+            } else {
+                starContainer.style.display = "block"; // Active les étoiles
+                starsActive = true;
+            }
+        });
+
+
+  generateRandomStars();
+    </script>
 
 </body>
 </html>
