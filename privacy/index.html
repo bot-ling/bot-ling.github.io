@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - LingBot</title>
+    <link rel="icon" type="image/x-icon" href="/assets/2.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/links">Links</a></li>
+            <li><a href="/credits">Credits</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+        </ul>
+    </nav>
+
+    <section id="home"></section>
+    <div class="content">
+        <h1>Privacy Policy</h1>
+        <p>At LingBot, user privacy is a top priority. This privacy policy describes the types of information we collect, how we use it, and how we protect it.</p>
+        
+        <h2>Information Collected</h2>
+        <p>We do not collect any personally identifiable information, nor do we use cookies. This site is a basic platform that does not collect your personal data.</p>
+
+        <h2>Use of Information</h2>
+        <p>Since we do not collect any personal data, there is no specific use made of the information.</p>
+
+        <h2>Data Protection</h2>
+        <p>Since we do not collect any personal data, there is no data storage to protect. We are committed to maintaining the confidentiality of users who access our site.</p>
+
+        <h2>Sharing of Information</h2>
+        <p>We do not sell, share, or disclose your personal information to third parties.</p>
+
+        <h2>Cookies</h2>
+        <p>We do not use cookies on our site. No information is collected or tracked through cookies, and we do not need to obtain your consent in this regard.</p>
+
+        <h2>Changes to the Privacy Policy</h2>
+        <p>We reserve the right to modify this privacy policy at any time. Changes will be posted on this page with an updated date.</p>
+
+        <h2>Contact</h2>
+        <p>If you have any questions regarding our privacy policy, feel free to contact us at the following link : <a target="_blank" href="https://discord.gg/ybJ3BTbXt7">https://discord.gg/ybJ3BTbXt7</a></p>
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 LingBot. All rights reserved.</p>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/credits">Credits</a></li>
+                <li><a href="/links">Links</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+            </ul>
+            <ul>
+                <li><a href="https://discord.gg/ybJ3BTbXt7">Support</a></li>
+                <li><a href="https://discord.com/oauth2/authorize?client_id=1314623460655370241&scope=bot+applications.commands&Fguild&permissions=2113400319">Invite</a></li>
+                <li><a href="https://github.com/">Source Code</a></li>
+            </ul>
+        </div>
+    </footer>
+
+<script>
+    const circle = document.createElement('div');
+    circle.id = 'mouse-circle';
+    document.body.appendChild(circle);
+
+    let isMouseMoving = false;
+    let idleTimeout;
+
+    document.addEventListener('mousemove', (e) => {
+        const { clientX: x, clientY: y } = e;
+
+        isMouseMoving = true;
+        clearTimeout(idleTimeout);
+        circle.style.left = `${x}px`;
+        circle.style.top = `${y}px`;
+        circle.style.opacity = 1;
+
+        const trail = document.createElement('div');
+        trail.className = 'trail';
+        trail.style.left = `${x}px`;
+        trail.style.top = `${y}px`;
+
+        document.body.appendChild(trail);
+
+        setTimeout(() => {
+            trail.remove();
+        }, 700);
+
+        idleTimeout = setTimeout(() => {
+            if (!isMouseMoving) {
+                circle.style.opacity = 0;
+            }
+        }, 300);
+    });
+
+    document.addEventListener('mouseleave', () => {
+        isMouseMoving = false;
+        circle.style.opacity = 0;
+    });
+
+    document.addEventListener('mouseenter', () => {
+        isMouseMoving = true;
+        circle.style.opacity = 1;
+    });
+</script>
+
+</body>
+</html>

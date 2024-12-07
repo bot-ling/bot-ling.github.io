@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LingBot</title>
+    <link rel="icon" type="image/x-icon" href="assets/2.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/links">Links</a></li>
+            <li><a href="/credits">Credits</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+        </ul>
+    </nav>
+
+    <section id="home"></section>
+    <div class="content">
+        <h1>Welcome to LingBot</h1>
+        <p>LingBot is a <code id="typewrite"> </code></p>
+    </div>
+
+    <div class="image-container">
+        <img src="assets/2.png" alt="LingBot Illustration">
+    </div>
+
+    <div class="features">
+        <div>
+            <h3>🌍 Multilingual</h3>
+            <p>Supports over 30 languages to meet your needs.</p>
+        </div>
+        <div>
+            <h3>⚡ Fast and Efficient</h3>
+            <p>Instant responses with precise translations.</p>
+        </div>
+        <div>
+            <h3>🔒 Reliable and Secure</h3>
+            <p>Respects your privacy and protects your data.</p>
+        </div>
+    </div>
+
+    <div class="cta-buttons">
+        <button class="cta">Join LingBot Support</button>
+        <button class="cta-secondary">Add to Discord</button>
+    </div>
+
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 LingBot. All rights reserved.</p>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/credits">Credits</a></li>
+                <li><a href="/links">Links</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+            </ul>
+            <ul>
+                <li><a href="https://discord.gg/ybJ3BTbXt7">Support</a></li>
+                <li><a href="https://discord.com/oauth2/authorize?client_id=1314623460655370241&scope=bot+applications.commands&Fguild&permissions=2113400319">Invite</a></li>
+                <li><a href="https://github.com/">Source Code</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    
+
+
+    <script src="1.js" type="module"></script>
+    <script>
+        const circle = document.createElement('div');
+        circle.id = 'mouse-circle';
+        document.body.appendChild(circle);
+
+        let isMouseMoving = false;
+        let idleTimeout;
+
+        document.addEventListener('mousemove', (e) => {
+            const { clientX: x, clientY: y } = e;
+
+            isMouseMoving = true;
+            clearTimeout(idleTimeout);
+
+            circle.style.left = `${x}px`;
+            circle.style.top = `${y}px`;
+            circle.style.opacity = 1;
+
+            const trail = document.createElement('div');
+            trail.className = 'trail';
+            trail.style.left = `${x}px`;
+            trail.style.top = `${y}px`;
+
+            document.body.appendChild(trail);
+
+            setTimeout(() => {
+                trail.remove();
+            }, 700);
+
+            idleTimeout = setTimeout(() => {
+                if (!isMouseMoving) {
+                    circle.style.opacity = 0;
+                }
+            }, 300);
+        });
+
+        document.addEventListener('mouseleave', () => {
+            isMouseMoving = false;
+            circle.style.opacity = 0;
+        });
+
+        document.addEventListener('mouseenter', () => {
+            isMouseMoving = true;
+            circle.style.opacity = 1;
+        });
+    </script>
+</body>
+</html>
