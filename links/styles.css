@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
-    cursor: url('2pic.png'), auto; 
+    cursor: url('/assets/2pic.png'), auto; 
 }
 
 
