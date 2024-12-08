@@ -155,8 +155,8 @@ section p {
     gap: 10px;
 }
 
-button.cta,
-button.cta-secondary {
+a.cta,
+a.cta-secondary {
     padding: 12px 20px;
     font-size: 1rem;
     border: none;
@@ -166,22 +166,22 @@ button.cta-secondary {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button.cta {
+a.cta {
     background-color: #f2f4f1;
     color: #262627;
 }
 
-button.cta:hover {
+a.cta:hover {
     background-color: #dcdcdc;
     transform: scale(1.05);
 }
 
-button.cta-secondary {
+a.cta-secondary {
     background-color: #444;
     color: #f2f4f1;
 }
 
-button.cta-secondary:hover {
+a.cta-secondary:hover {
     background-color: #333;
     transform: scale(1.05);
 }
