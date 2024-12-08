@@ -35,3 +35,9 @@ toggleButton.addEventListener("click", () => {
 });
 
 generateRandomStars();
+
+function vsy_giga_flemme_sa_race_mais_pour_activer_les_starts_par_defaut_pfffffiooooooouuuuuuu() {
+    starContainer.style.display = "block"
+}
+
+vsy_giga_flemme_sa_race_mais_pour_activer_les_starts_par_defaut_pfffffiooooooouuuuuuu()
