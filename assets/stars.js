@@ -13,31 +13,25 @@ function generateRandomStars() {
     }
 }
 
-let starsActive = localStorage.getItem("starsActive") === "true"; 
+let starsActive = localStorage.getItem("starsActive");
+
+// Si aucune valeur dans le localStorage activer les étoiles par défaut 
+if (starsActive === null) {
+    starsActive = true;
+    localStorage.setItem("starsActive", true); 
+} else {
+    starsActive = starsActive === "true"; 
+}
 
 const starContainer = document.getElementById("star-container");
 const toggleButton = document.getElementById("toggle-stars");
 
-if (!starsActive) {
-    starContainer.style.display = "none"; 
-}
+starContainer.style.display = starsActive ? "block" : "none";
 
 toggleButton.addEventListener("click", () => {
-    if (starsActive) {
-        starContainer.style.display = "none"; // Désactive les étoiles
-        starsActive = false;
-    } else {
-        starContainer.style.display = "block"; // Active les étoiles
-        starsActive = true;
-    }
-
+    starsActive = !starsActive;
+    starContainer.style.display = starsActive ? "block" : "none";
     localStorage.setItem("starsActive", starsActive);
 });
 
 generateRandomStars();
-
-function vsy_giga_flemme_sa_race_mais_pour_activer_les_starts_par_defaut_pfffffiooooooouuuuuuu() {
-    starContainer.style.display = "block"
-}
-
-vsy_giga_flemme_sa_race_mais_pour_activer_les_starts_par_defaut_pfffffiooooooouuuuuuu()

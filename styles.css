@@ -308,7 +308,6 @@ code {
 
 
 
-/* Requête média pour mobile */
 @media (max-width: 768px) {
     .navbar {
         background-color: #1f1f1f;
