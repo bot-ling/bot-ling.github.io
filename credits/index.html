@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LingBot - Credits</title>
+    <link rel="icon" type="image/x-icon" href="/assets/2.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/assets/stars.css">
+    <link rel="stylesheet" href="/assets/navbar.css">
+    <link rel="stylesheet" href="/assets/footer.css">
+
+    <meta charset="utf-8">
+    <meta name="google-site-verification" content="NiMI_p--l9IJ7h2ePQBtFTiaRnt6ZnD_T-5VWSWUQa8" />
+    <meta name="description" content="LingBot is a powerful, multilingual Discord bot. With support for real-time translations, interactive features, and user-friendly commands, LingBot enhances the Discord experience for users worldwide.">
+    <meta name="keywords" content="LingBot, Discord bot, multilingual bot, translation bot, language support, cross-language communication, real-time translation, bot for Discord">
+    <meta name="author" content="LingBot Team">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="LingBot - Credits">
+    <meta property="og:description" content="LingBot is a powerful, multilingual Discord bot. With support for real-time translations, interactive features, and user-friendly commands, LingBot enhances the Discord experience for users worldwide.">
+    <meta property="og:image" content="https://bot-ling.github.io/assets/2.png">
+    <meta property="og:url" content="https://bot-ling.github.io">
+    <meta name="twitter:card" content="/assets/2.png">
+    <meta name="twitter:title" content="LingBot - Credits">
+    <meta name="twitter:description" content="LingBot is a powerful, multilingual Discord bot. With support for real-time translations, interactive features, and user-friendly commands, LingBot enhances the Discord experience for users worldwide.">
+    <meta name="twitter:image" content="https://bot-ling.github.io/assets/2.png">
+    
+    
+    <!-- MetaData Other -->
+    <meta name="author" content="LingBot">
+    <meta name="generator" content="InovaPerf">
+    <meta name="theme-color" content="#0099ff">
+    <meta name="msapplication-TileColor" content="##5445db">
+    
+    <meta name="msapplication-TileImage" content="https://bot-ling.github.io/assets/2.png">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/"        draggable="false">Home</a></li>
+            <li><a href="/links"   draggable="false">Links</a></li>
+            <li><a href="/credits" draggable="false">Credits</a></li>
+            <li><a href="/privacy" draggable="false">Privacy Policy</a></li>
+        </ul>
+    </nav>
+
+    <section id="credits">
+        <div class="content">
+            <h1>Credits</h1>
+            <p>Here are the credits for the development of LingBot:</p>
+
+            <h2>Development</h2>
+            <p>Created by <strong>liveweeeb</strong>, <code id="typewrite"> </code></p>
+
+            <h2>Design</h2>
+            <p>The design of this site was created by <strong>liveweeeb</strong>.</p>
+
+            <h2>Libraries and Tools Used</h2>
+            <ul>
+                <li><a href="https://fontsource.org/fonts/inconsolata" target="_blank">Inconsolata</a> - Font used for the text.</li>
+                <li><a href="https://www.google.com/fonts" target="_blank">Google Fonts</a> - Provider of the "Noto Serif" font.</li>
+                <li><a href="https://discordlookup.com/user/678246010488619046" target="_blank">Gabsamw</a> - Hosting provider for the bot.</li>
+                <li><a href="https://pages.github.com" target="_blank">Github Pages</a> - Hosting provider for this site.</li>
+                <li><a href="https://custom-cursor.com/fr/collection/among-us/among-us-red-keyhole" target="_blank">Among Us Cursor</a> - Cursor used on this site.</li>
+                <li><a href="https://aynonyme.is-a.dev" target="_blank">AYnønyme ツ</a> - The writing effect comes from his site</li>
+            </ul>
+
+            <h2></h2>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 LingBot. All rights reserved.</p>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/credits">Credits</a></li>
+                <li><a href="/links">Links</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+            </ul>
+            <ul>
+                <li><a href="https://discord.gg/ybJ3BTbXt7">Support</a></li>
+                <li><a href="https://discord.com/oauth2/authorize?client_id=1314623460655370241&scope=bot+applications.commands&Fguild&permissions=2113400319">Invite</a></li>
+                <li><a href="https://github.com/bot-ling/bot-ling.github.io">Source Code</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        const circle = document.createElement('div');
+        circle.id = 'mouse-circle';
+        document.body.appendChild(circle);
+
+        let isMouseMoving = false;
+        let idleTimeout;
+
+        document.addEventListener('mousemove', (e) => {
+            const { clientX: x, clientY: y } = e;
+
+            isMouseMoving = true;
+            clearTimeout(idleTimeout);
+
+            circle.style.left = `${x}px`;
+            circle.style.top = `${y}px`;
+            circle.style.opacity = 1;
+
+            const trail = document.createElement('div');
+            trail.className = 'trail';
+            trail.style.left = `${x}px`;
+            trail.style.top = `${y}px`;
+
+            document.body.appendChild(trail);
+
+            setTimeout(() => {
+                trail.remove();
+            }, 700);
+
+            idleTimeout = setTimeout(() => {
+                if (!isMouseMoving) {
+                    circle.style.opacity = 0;
+                }
+            }, 300);
+        });
+
+        document.addEventListener('mouseleave', () => {
+            isMouseMoving = false;
+            circle.style.opacity = 0;
+        });
+
+        document.addEventListener('mouseenter', () => {
+            isMouseMoving = true;
+            circle.style.opacity = 1;
+        });
+    </script>
+
+    <script src="1.js" type="module"></script>
+</script>
+<button class="toggle-button" id="toggle-stars">Flake</button>
+<div class="star-container" id="star-container"></div>
+<script src="/assets/stars.js"></script>
+</body>
+</html>
