@@ -8,7 +8,7 @@ const words = {
     "Reactive bot": "#4682b4",
     "Fast bot": "#00ffff",
     "Evolving bot": "#ffd700",
-    "Versatile bot": "#00bfff",
+    "Fishing bot": "#00ff80",
     "Interactive bot": "#f5deb3"
 },
 
