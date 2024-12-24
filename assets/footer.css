@@ -13,14 +13,14 @@ section {
 .footer {
     flex-grow: 1;
     display: flex;
-    align-items: top; /* Centre verticalement le contenu du footer */
-    justify-content: center; /* Centre horizontalement le contenu du footer */
+    align-items: top;
+    justify-content: center; 
     background-color: #1a1a1a;
     color: #ddd;
     padding: 40px 20px;
     text-align: center;
     border-top: 3px solid #3498db;
-    margin-top: 50px; /* Ajoute un espace au-dessus du footer */
+    margin-top: 50px; 
 }
 
 .footer-content {
