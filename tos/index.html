@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - LingBot</title>
+    <title>TOS - LingBot</title>
     <link rel="icon" type="image/x-icon" href="/assets/2.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,12 +20,12 @@
     <meta name="keywords" content="LingBot, Discord bot, multilingual bot, translation bot, language support, cross-language communication, real-time translation, bot for Discord">
     <meta name="author" content="LingBot Team">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="LingBot - Privacy">
+    <meta property="og:title" content="LingBot - TOS">
     <meta property="og:description" content="LingBot is a powerful, multilingual Discord bot. With support for real-time translations, interactive features, and user-friendly commands, LingBot enhances the Discord experience for users worldwide.">
     <meta property="og:image" content="https://bot-ling.github.io/assets/2.png">
     <meta property="og:url" content="https://bot-ling.github.io">
     <meta name="twitter:card" content="/assets/2.png">
-    <meta name="twitter:title" content="LingBot - Privacy">
+    <meta name="twitter:title" content="LingBot - TOS">
     <meta name="twitter:description" content="LingBot is a powerful, multilingual Discord bot. With support for real-time translations, interactive features, and user-friendly commands, LingBot enhances the Discord experience for users worldwide.">
     <meta name="twitter:image" content="https://bot-ling.github.io/assets/2.png">
     
@@ -57,30 +57,50 @@
 
     <section id="home"></section>
     <div class="content">
-        <h1>Privacy Policy</h1>
-        <p>At LingBot, user privacy is a top priority. This privacy policy describes the types of information we collect, how we use it, and how we protect it.</p>
+        <h1>Terms of Service</h1>
+        <p>Welcome to LingBot! By using LingBot, you agree to the terms of service outlined below. Please read them carefully before using the bot.</p>
+    
+        <h2>Acceptance of Terms</h2>
+        <p>By accessing or using LingBot, you agree to comply with these Terms. If you do not agree to any of these Terms, you are not permitted to use LingBot.</p>
         
+        <h2>Using LingBot</h2>
+        <p>LingBot is designed to provide useful and entertaining features to Discord users. By using the bot, you agree not to:</p>
+        <ul>
+            <li>Use the bot for illegal purposes or in violation of Discord's Terms of Service.</li>
+            <li>Attempt to exploit or disrupt the bot, its services, or its features.</li>
+        </ul>
+    
         <h2>Information Collected</h2>
-        <p>We do not collect any personally identifiable information, nor do we use cookies. This site is a basic platform that does not collect your personal data.</p>
-
+        <p>LingBot does not collect any personally identifiable information. However, user Discord identifiers (such as Discord IDs) are stored for the following features:</p>
+        <ul>
+            <li>💡 Warning System</li>
+            <li>🎣 Fishing System</li>
+            <li>⭐ Premium Features</li>
+            <li>🌐 Language Management</li>
+        </ul>
+        <p>This data is strictly used for the features mentioned above.</p>
+    
         <h2>Use of Information</h2>
-        <p>Since we do not collect any personal data, there is no specific use made of the information.</p>
-
+        <p>The information collected is used exclusively to provide the requested services, such as commands or features associated with the warning, fishing, premium, and language systems. No data will be used for other purposes.</p>
+    
         <h2>Data Protection</h2>
-        <p>Since we do not collect any personal data, there is no data storage to protect. We are committed to maintaining the confidentiality of users who access our site.</p>
-
-        <h2>Sharing of Information</h2>
-        <p>We do not sell, share, or disclose your personal information to third parties.</p>
-
+        <p>All data is stored securely. The LingBot team is committed to protecting user information and maintaining confidentiality.</p>
+    
+        <h2>Information Sharing</h2>
+        <p>The information collected by LingBot is never sold, shared, or disclosed to third parties, except as required by law.</p>
+    
         <h2>Cookies</h2>
-        <p>We do not use cookies on our site. No information is collected or tracked through cookies, and we do not need to obtain your consent in this regard.</p>
-
-        <h2>Changes to the Privacy Policy</h2>
-        <p>We reserve the right to modify this privacy policy at any time. Changes will be posted on this page with an updated date.</p>
-
+        <p>LingBot does not collect or track any information via cookies. No permission is required in this regard.</p>
+    
+        <h2>Changes to the Terms Of Service</h2>
+        <p>We reserve the right to modify this Terms Of Service at any time. Changes will be posted on this page with an updated date.</p>
+    
         <h2>Contact</h2>
-        <p>If you have any questions regarding our privacy policy, feel free to contact us at the following link : <a target="_blank" href="https://discord.gg/ybJ3BTbXt7">https://discord.gg/ybJ3BTbXt7</a></p>
+        <p>If you have any questions regarding our Terms Of Service, feel free to contact us via the following link: <a target="_blank" href="https://discord.gg/ybJ3BTbXt7">https://discord.gg/ybJ3BTbXt7</a></p>
+        <br>
+        <p>Last updated: <span class="timestamp" data-timestamp="1735160130">Loading...</span></p>
     </div>
+    
 
     
     <footer class="footer">
@@ -100,6 +120,28 @@
             </ul>
         </div>
     </footer>
+
+    <script>
+        function formatTimestamp(timestamp) {
+            const date = new Date(timestamp * 1000); 
+            const options = {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric',
+                hour12: false
+            };
+            return date.toLocaleString('fr-FR', options); 
+        }
+    
+        document.querySelectorAll('.timestamp').forEach(function(element) {
+            const timestamp = element.getAttribute('data-timestamp');
+            element.textContent = formatTimestamp(timestamp); 
+        });
+    </script>
+    
 
 <script>
     const circle = document.createElement('div');
