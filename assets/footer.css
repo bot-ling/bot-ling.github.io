@@ -13,47 +13,64 @@ section {
 .footer {
     flex-grow: 1;
     display: flex;
-    align-items: top;
-    justify-content: center; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
     background-color: #1a1a1a;
     color: #ddd;
     padding: 40px 20px;
     text-align: center;
     border-top: 3px solid #3498db;
-    margin-top: 50px; 
+    margin-top: 50px;
 }
 
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    width: 100%;
+    align-items: flex-start;
 }
 
 .footer a {
-    color: #3498db; 
+    color: #3498db;
     text-decoration: none;
-    font-weight: 600; 
-    margin: 0 15px; 
+    font-weight: 600;
+    margin: 0 15px;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .footer a:hover {
-    color: #e74c3c; 
-    transform: translateY(-2px); 
+    color: #e74c3c;
+    transform: translateY(-2px);
 }
 
 .footer ul {
-    list-style: none; 
+    list-style: none;
     padding: 0;
-    margin: 20px 0 0; 
+    margin: 0;
+    display: flex;
+    padding-top: 5%;
+    flex-direction: column;
+    gap: 10px; 
 }
 
 .footer ul li {
-    display: inline-block; 
-    margin: 0 20px; 
+    display: block;
+    margin: 0;
+    margin-top: 10px;
+    max-width: 200px;
+    white-space: nowrap;
 }
 
+
 .footer p {
-    font-size: 14px; 
-    margin-top: 20px;
+    font-size: 14px;
+    margin-top: 0; 
+    margin-bottom: 20px;
     opacity: 0.7;
+    text-align: center;
+    width: 100%;
 }

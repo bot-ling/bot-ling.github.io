@@ -35,3 +35,12 @@ toggleButton.addEventListener("click", () => {
 });
 
 generateRandomStars();
+
+document.addEventListener("scroll", function () {
+    const toggleButton = document.querySelector(".toggle-button");
+    if (window.scrollY > 60) { // Si l'utilisateur a défilé de plus de 50px
+        toggleButton.classList.add("scrolled");
+    } else {
+        toggleButton.classList.remove("scrolled");
+    }
+});

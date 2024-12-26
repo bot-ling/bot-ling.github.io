@@ -45,8 +45,19 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     font-size: 18px;
     z-index: 2;
+    transition: top 0.3s ease;
 }
 
 .toggle-button:hover {
     background-color: #2980b9;
 }
+
+@media (max-width: 768px) {
+    .toggle-button {
+        top: 15%;
+    }
+}
+
+    .toggle-button.scrolled {
+        top: 1%;
+    }
