@@ -55,6 +55,7 @@
 @media (max-width: 768px) {
     .toggle-button {
         top: 15%;
+        right: 10%;
     }
 }
 
