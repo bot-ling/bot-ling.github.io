@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="/assets/stars.css">
+    <link rel="stylesheet" href="/assets/mouse.css">
     <link rel="stylesheet" href="/assets/navbar.css">
     <link rel="stylesheet" href="/assets/footer.css">
 
@@ -94,57 +95,14 @@
         </div>
     </footer>
 
-    <script>
-        const circle = document.createElement('div');
-        circle.id = 'mouse-circle';
-        document.body.appendChild(circle);
-
-        let isMouseMoving = false;
-        let idleTimeout;
-
-        document.addEventListener('mousemove', (e) => {
-            const { clientX: x, clientY: y } = e;
-
-            isMouseMoving = true;
-            clearTimeout(idleTimeout);
-
-            circle.style.left = `${x}px`;
-            circle.style.top = `${y}px`;
-            circle.style.opacity = 1;
-
-            const trail = document.createElement('div');
-            trail.className = 'trail';
-            trail.style.left = `${x}px`;
-            trail.style.top = `${y}px`;
-
-            document.body.appendChild(trail);
-
-            setTimeout(() => {
-                trail.remove();
-            }, 700);
-
-            idleTimeout = setTimeout(() => {
-                if (!isMouseMoving) {
-                    circle.style.opacity = 0;
-                }
-            }, 300);
-        });
-
-        document.addEventListener('mouseleave', () => {
-            isMouseMoving = false;
-            circle.style.opacity = 0;
-        });
-
-        document.addEventListener('mouseenter', () => {
-            isMouseMoving = true;
-            circle.style.opacity = 1;
-        });
-    </script>
+  
 
     <script src="1.js" type="module"></script>
 </script>
 <button class="toggle-button" id="toggle-stars">Flake</button>
 <div class="star-container" id="star-container"></div>
 <script src="/assets/stars.js"></script>
+<script src="/assets/mouse.js"></script>
+
 </body>
 </html>
